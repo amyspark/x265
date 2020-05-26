@@ -751,7 +751,7 @@ if(ENABLE_SHARED)
         endif()
     endif()
     set_target_properties(x265-shared PROPERTIES SOVERSION ${X265_BUILD})
-    if(X265_LATEST_TAG)
+    #if(X265_LATEST_TAG)
         if(WINDOWS)
             set_target_properties(x265-shared PROPERTIES VERSION ${X265_LATEST_TAG})
         endif()
@@ -760,7 +760,7 @@ if(ENABLE_SHARED)
                 LIBRARY DESTINATION ${LIB_INSTALL_DIR}
                 ARCHIVE DESTINATION ${LIB_INSTALL_DIR}
                 RUNTIME DESTINATION ${BIN_INSTALL_DIR})
-    endif()
+    #endif()
     if(ENABLE_HDR10_PLUS)
         install(TARGETS hdr10plus-shared
             LIBRARY DESTINATION ${LIB_INSTALL_DIR}
