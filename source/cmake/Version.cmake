@@ -51,11 +51,7 @@ find_package(Git QUIET) #No restrictions on Git versions used, any versions from
 if(GIT_FOUND)
     find_program(GIT_EXECUTABLE git)
     message(STATUS "GIT_EXECUTABLE ${GIT_EXECUTABLE}")
-    if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../.git)
-        set(GIT_ARCHETYPE "0")
-    elseif(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/../x265Version.txt)
-        set(GIT_ARCHETYPE "1")
-    endif()
+    set(GIT_ARCHETYPE "1")
 endif(GIT_FOUND)
 if(HG_ARCHETYPE)
     #Read the lines of the archive summary file to extract the version
